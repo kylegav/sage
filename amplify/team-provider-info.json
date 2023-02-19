@@ -1,0 +1,28 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sagereact-prod-181901-authRole",
+      "UnauthRoleArn": "arn:aws:iam::076264789165:role/amplify-sagereact-prod-181901-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::076264789165:role/amplify-sagereact-prod-181901-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-sagereact-prod-181901-deployment",
+      "UnauthRoleName": "amplify-sagereact-prod-181901-unauthRole",
+      "StackName": "amplify-sagereact-prod-181901",
+      "StackId": "arn:aws:cloudformation:us-east-1:076264789165:stack/amplify-sagereact-prod-181901/c7948910-b0ab-11ed-8d1f-0ab2700ca4cf",
+      "AmplifyAppId": "d3ifqfszpzb2nb"
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sagereact-dev-182313-authRole",
+      "UnauthRoleArn": "arn:aws:iam::076264789165:role/amplify-sagereact-dev-182313-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::076264789165:role/amplify-sagereact-dev-182313-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-sagereact-dev-182313-deployment",
+      "UnauthRoleName": "amplify-sagereact-dev-182313-unauthRole",
+      "StackName": "amplify-sagereact-dev-182313",
+      "StackId": "arn:aws:cloudformation:us-east-1:076264789165:stack/amplify-sagereact-dev-182313/5de7f6e0-b0ac-11ed-8946-0e255abc33b9",
+      "AmplifyAppId": "d3ifqfszpzb2nb"
+    }
+  }
+}
