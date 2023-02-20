@@ -23,6 +23,11 @@
       "StackName": "amplify-sagereact-dev-182313",
       "StackId": "arn:aws:cloudformation:us-east-1:076264789165:stack/amplify-sagereact-dev-182313/5de7f6e0-b0ac-11ed-8946-0e255abc33b9",
       "AmplifyAppId": "d3ifqfszpzb2nb"
+    },
+    "categories": {
+      "auth": {
+        "sagereact": {}
+      }
     }
   }
 }
