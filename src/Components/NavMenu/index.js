@@ -11,12 +11,21 @@ const NavMenu = () => {
             key: "/",
             label: "Home",
         },
+        {
+            key: "account",
+            label: "Account",
+
+        },
+        {
+            key: "timeoff",
+            label: "Time Off"
+        }
     ];
 
     const onMenuClick = (menuItem) => {
         navigate(menuItem.key)
     };
-
+    // TODO: Style Menu centered
     return (
         <Menu onClick={onMenuClick} mode="horizontal" items={MenuItems} />
     )
