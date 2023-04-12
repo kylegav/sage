@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import AppRoutes from "./Components/AppRoutes";
+import NavMenu from "./Components/NavMenu"
+import {Layout} from "antd";
+import packageInfo from "../package.json"
+
+const {Content, Footer, Header} = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Layout>
+        <Header>
+          <NavMenu/>
+        </Header>
+        <Layout>
+          <Content>
+            <AppRoutes></AppRoutes>
+          </Content>
+          <Footer style={{textAlign: "center", backgroundColor: 'lightgray' }}>
+            Sage UI {packageInfo.version} ©Kyle Gavin 2023
+          </Footer>
+        </Layout>
+      </Layout>
+
   );
 }
 

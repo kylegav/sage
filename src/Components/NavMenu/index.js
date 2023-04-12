@@ -6,7 +6,12 @@ const NavMenu = () => {
     const navigate = useNavigate();
 
     // TODO: Define Nav Menu Options in here
-    const MenuItems = [];
+    const MenuItems = [
+        {
+            key: "/",
+            label: "Home",
+        },
+    ];
 
     const onMenuClick = (menuItem) => {
         navigate(menuItem.key)
