@@ -1,4 +1,4 @@
-import {Card, Avatar, Skeleton} from 'antd';
+import {Card, Avatar, Skeleton, Space} from 'antd';
 import React, { useState } from 'react';
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 
