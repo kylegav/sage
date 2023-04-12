@@ -18,8 +18,12 @@ const NavMenu = () => {
         },
         {
             key: "timeoff",
-            label: "Time Off"
-        }
+            label: "Time Off",
+        },
+        {
+            key: "contacts",
+            label: "Contacts",
+        },
     ];
 
     const onMenuClick = (menuItem) => {
