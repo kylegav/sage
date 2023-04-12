@@ -45,6 +45,9 @@ const columns = [
   }
 ]
 
+// TODO: Table needs to be editable
+// TODO: Create onClick methods to navigate to a form to update employee information
+
 const Employee = () => {
     return (
     <>
