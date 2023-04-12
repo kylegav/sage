@@ -13,7 +13,6 @@ const AppRoutes = () => {
             <Route path ="account"  element={<Account/>}/>
             <Route path ="timeoff" element={<TimeOff/>}/>
             <Route path ='contacts' element={<Contacts/>}/>
-            <Route path ='employee' element = {<TableView/>}/>
             <Route path ='tableview' element = {<Employee/>}/>
         </Routes>
     )
