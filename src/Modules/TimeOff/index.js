@@ -66,12 +66,15 @@ const TimeOff = () => {
             </Form.Item>
             <Form.Item label="Reason">
                 <Cascader
-                    options={[{
+                    options={[
+                      {
                         value: 'Vacation',
                         label: 'Vacation',
-                        value: 'Sick Leave',
-                        label: 'Sick Leave',
                     },
+                      {
+                        value: 'Sick Leave',
+                        label: 'Sick Leave'
+                      },
                     ]}
                     />
             </Form.Item>
