@@ -2,6 +2,7 @@ import {Card, Avatar, Skeleton} from 'antd';
 
 const {Meta} = Card;
 
+
 const Contacts = () => {
     return (
         // TODO: Implement Table View ? Or some Container that allows cards to be displayed
