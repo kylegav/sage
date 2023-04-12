@@ -11,11 +11,7 @@ const Contacts = () => {
     <>
       <Card
         style={{ width: 300, marginTop: 16 }}
-        actions={[
-          <SettingOutlined key="setting" />,
-          <EditOutlined key="edit" />,
-          <EllipsisOutlined key="ellipsis" />,
-        ]}
+        
       >
         <Skeleton loading={false} avatar active>
           <Meta
@@ -27,11 +23,7 @@ const Contacts = () => {
       </Card>
       <Card
         style={{ width: 300, marginTop: 16 }}
-        actions={[
-          <SettingOutlined key="setting" />,
-          <EditOutlined key="edit" />,
-          <EllipsisOutlined key="ellipsis" />,
-        ]}
+        
       >
         <Skeleton loading={false} avatar active>
           <Meta
@@ -43,11 +35,7 @@ const Contacts = () => {
       </Card>
       <Card
         style={{ width: 300, marginTop: 16 }}
-        actions={[
-          <SettingOutlined key="setting" />,
-          <EditOutlined key="edit" />,
-          <EllipsisOutlined key="ellipsis" />,
-        ]}
+        
       >
         <Skeleton loading={false} avatar active>
           <Meta
@@ -59,11 +47,7 @@ const Contacts = () => {
       </Card>
       <Card
         style={{ width: 300, marginTop: 16 }}
-        actions={[
-          <SettingOutlined key="setting" />,
-          <EditOutlined key="edit" />,
-          <EllipsisOutlined key="ellipsis" />,
-        ]}
+        
       >
         <Skeleton loading={false} avatar active>
           <Meta
