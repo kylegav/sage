@@ -24,6 +24,16 @@ const NavMenu = () => {
             key: "contacts",
             label: "Contacts",
         },
+        {
+            key: "employee",
+            label: "Employees",
+            children: [
+                {
+                    key: "tableview",
+                    label: "Table View"
+                }
+            ]
+        }
     ];
 
     const onMenuClick = (menuItem) => {
