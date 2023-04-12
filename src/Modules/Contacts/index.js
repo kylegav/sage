@@ -15,9 +15,9 @@ const Contacts = () => {
       >
         <Skeleton loading={false} avatar active>
           <Meta
-            avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=2" />}
-            title="Card title"
-            description="This is the description"
+            avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=1" />}
+            title="Justin Green"
+            description="4431005000   justin.green@sage.com"
           />
         </Skeleton>
       </Card>
@@ -28,8 +28,8 @@ const Contacts = () => {
         <Skeleton loading={false} avatar active>
           <Meta
             avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=2" />}
-            title="Card title"
-            description="This is the description"
+            title="Harris White"
+            description="3021007000    harris.white@sage.com"
           />
         </Skeleton>
       </Card>
@@ -39,9 +39,9 @@ const Contacts = () => {
       >
         <Skeleton loading={false} avatar active>
           <Meta
-            avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=2" />}
-            title="Card title"
-            description="This is the description"
+            avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=3" />}
+            title="Patunya Picklebottom"
+            description="3026906900     patunya.pickle@sage.com"
           />
         </Skeleton>
       </Card>
@@ -49,9 +49,9 @@ const Contacts = () => {
         style={{ width: 300, marginTop: 16 }}
         
       >
-        <Skeleton loading={false} avatar active>
+        <Skeleton loading={true} avatar active>
           <Meta
-            avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=2" />}
+            avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=4" />}
             title="Card title"
             description="This is the description"
           />
