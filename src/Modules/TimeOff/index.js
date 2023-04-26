@@ -2,92 +2,65 @@ import React, { useState } from 'react';
 import { PlusOutlined } from '@ant-design/icons';
 import {
     Card,
-    Form,
-    Input,
-    Button,
-    Select,
-    Cascader,
-    DatePicker,
-    InputNumber,
-    TreeSelect,
-    Switch,
-    Checkbox,
-    Upload,
+    Space,
+    Table,
+    Tag,
   } from 'antd';
 
-const { RangePicker } = DatePicker;
-const { TextArea } = Input;
-const TimeOff = () => {
-    // TODO: Update UI to display correct names
-    const onFinish = (values) => {
-        console.log("Finished:", values)
-    };
+const columns = [
+    {
+        title: 'Name',
+        dataIndex: 'name',
+        key: 'name',
+    },
+    {
+        title: 'Date',
+        dataIndex: 'date',
+        key: 'date',
+    },
+    {
+        title: 'Status',
+        dataIndex: 'status',
+        key: 'status',
+        render:(_, { tags }) => (
+            <>
+                {tags?.map((tag) => {
+                        let color = tag === 'Available' ? 'geekblue' : 'green';
+                        if (tag === 'Denied') {
+                            color = 'volcano';
+                        }
+                        return (
+                            <Tag color={color} key={tag}>
+                                {tag.toUpperCase()}
+                            </Tag>
+                        );
+                    }
+                )}
+            </>
+        ),
+    },
+]
 
-    const onFinishFailed = (errorInfo) => {
-        console.log("Failed to Finish:", errorInfo)
-    };
+const data = [
+    {
+        name: "Joe Shmama",
+        date: "August 12",
+        status: "Available",
+    },
+    {
+        name: "Mike Hawk",
+        date: "August 12",
+        status: "Denied",
+    }
+]
+const TimeOff = () => {
     return (
         <>
-        <Card title={"Time Off Request"}>
-        <Form
-            name="TimeOff"
-            labelCol={{
-                span: 8,
-            }}
-            wrapperCol={{
-                span: 16,
-            }}
-            style={{
-                maxWidth: 600,
-            }}
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-            autoComplete="off"
-            >
-            <Form.Item
-            label="Username"
-            name="username"
-            rules={[
-                {
-                    required: true,
-                    message: 'Please input your username!',
-                },
-            ]}
-            >
-                <Input />
-            <Form.Item>
-                <Form.Item label="DateRangePicker">
-                    <RangePicker />
-                </Form.Item>
-            </Form.Item>
-            </Form.Item>
-            <Form.Item label="Reason">
-                <Cascader
-                    options={[
-                      {
-                        value: 'Vacation',
-                        label: 'Vacation',
-                    },
-                      {
-                        value: 'Sick Leave',
-                        label: 'Sick Leave'
-                      },
-                    ]}
-                    />
-            </Form.Item>
-            <Form.Item label="Reason for time off request:">
-                <TextArea rows={4}/>
-            </Form.Item>
-            <Form.Item>
-                <Form.Item>
-                    <Button>Submit</Button>
-                </Form.Item>
-            </Form.Item>
-        </Form>
-        </Card>
+            <Card title={"Time Off page"}/>
+            <Table
+                dataSource={data}
+                columns={columns}
+                ></Table>
         </>
     )
 };
