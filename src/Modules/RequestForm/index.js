@@ -5,9 +5,16 @@ import {
     DatePicker,
     Cascader,
     Button,
+    Skeleton,
+    Spin,
+
     } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 const options = [
     {
@@ -29,8 +36,13 @@ const options = [
 ];
 
 const RequestForm = () => {
+    const [loading, setLoading] = useState(true);
+
+    sleep(1000).then(r => setLoading(false))
+
     const [form] = Form.useForm();
     const navigate = useNavigate();
+
 
     const onFinish = (values) => {
         console.log('Form values:', values);
@@ -41,14 +53,6 @@ const RequestForm = () => {
         navigate('/timeoff');
     };
 
-    const [loading, setLoading] = useState(false)
-    const onButtonClick=(e)=>{
-        console.log('Button clicked')
-        setLoading(true)
-        setTimeout(() => {
-            setLoading(false)
-        }, 2000);
-    }
 
     return (
         <div style={{
@@ -56,6 +60,7 @@ const RequestForm = () => {
             flexDirection: 'column',
             alignItems: 'center'
         }}>
+          <Spin spinning={loading}>
             <div style={{ marginBottom: 16 }}>
                 <Button
                     type="text"
@@ -63,6 +68,7 @@ const RequestForm = () => {
                     onClick={handleGoBack}
                 >Back</Button>
             </div>
+            <Skeleton loading={loading}>
             <Form form={form} onFinish={onFinish} style={{ width: '100%', maxWidth: 400 }}>
                 <Form.Item
                     label="Date Range"
@@ -91,6 +97,8 @@ const RequestForm = () => {
                     </Button>
                 </Form.Item>
             </Form>
+            </Skeleton>
+      </Spin>
         </div>
     );
 };
