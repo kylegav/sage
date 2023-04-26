@@ -18,7 +18,7 @@ function App() {
             <AppRoutes></AppRoutes>
           </Content>
           <Footer style={{textAlign: "center", backgroundColor: 'lightgray' }}>
-            Sage UI {packageInfo.version} ©Kyle Gavin 2023
+            Sage UI {packageInfo.version} ©Buss In Boots 2023
           </Footer>
         </Layout>
       </Layout>

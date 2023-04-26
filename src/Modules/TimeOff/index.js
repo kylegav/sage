@@ -8,6 +8,7 @@ import {
     Table,
     Tag,
   } from 'antd';
+import { Link } from 'react-router-dom';
 
 const columns = [
     {
@@ -22,7 +23,6 @@ const columns = [
         sorter: (a,b) => new Date(a.date) - new Date(b.date),
     },
     {
-        //Use column.shouldCellUpdate to update status tag
         title: 'Status',
         dataIndex: 'status',
         key: 'status',
@@ -43,12 +43,12 @@ const data = [
         status: 'Approved',
     },
     {
-        name: 'Mike Hawk',
+        name: 'Joe Shmama',
         date: 'August 13',
         status: 'Denied',
     },
     {
-        name: 'Johnny Blaze',
+        name: 'Joe Shmama',
         date: 'August 9',
         status: 'Pending',
     },
@@ -68,13 +68,15 @@ const TimeOff = () => {
             <Card title={"Time Off Page"}/>
             <Row justify="end" style={{ marginBottom: '1rem' }}>
                 <Col>
-                    <Button
-                        type='default'
-                        style={{ float: 'right' }}
-                        loading={loading}
-                        icon={<PlusOutlined />}
-                        onClick={onButtonClick}
-                    >Request Availability</Button>
+                    <Link to="/timeoff/RequestForm">
+                        <Button
+                            type='default'
+                            style={{ float: 'right' }}
+                            loading={loading}
+                            icon={<PlusOutlined />}
+                            onClick={onButtonClick}
+                        >Request Availability</Button>
+                    </Link>
                 </Col>
             </Row>
             <Table
