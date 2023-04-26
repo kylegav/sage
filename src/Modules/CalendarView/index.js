@@ -1,4 +1,4 @@
-import {Card, Calendar, Alert, Popover} from 'antd';
+import {Card, Calendar, Alert, Popover, Skeleton, Spin} from 'antd';
 import React, { useState } from 'react';
 import dayjs from 'dayjs';
 import shiftdata26 from "../../Data/shiftdata26.json"
@@ -8,10 +8,18 @@ import shiftdata25 from "../../Data/shiftdata25.json"
 import shiftdata27 from "../../Data/shiftdata27.json"
 
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
 const CalendarView = () => {
    const [value, setValue] = useState(() => dayjs(dayjs.today));
    const [selectedValue, setSelectedValue] = useState(() => dayjs(dayjs.today));
+   const [loading, setLoading] = useState(true);
 
+  // Illusion of "loading data"
+   sleep(2000).then(r => setLoading(false))
 
    const getShiftCellData = (value) => {
      let listData;
@@ -85,14 +93,19 @@ const CalendarView = () => {
 
 
     return (
+        <Spin spinning={loading}>
+
         <Card title={"Calendar Overview"}>
           <Alert message={`Active Selection: ${selectedValue?.format('YYYY-MM-DD')}`} />
+          <Skeleton loading={loading}>
           <Calendar onPanelChange={onPanelChange}
                     onSelect={onSelect}
                     dateCellRender={dateCellRender}
                     mode={"month"}
           />
+          </Skeleton>
         </Card>
+          </Spin>
     )
 };
 

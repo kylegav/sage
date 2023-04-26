@@ -7,8 +7,15 @@ import {
     Col,
     Table,
     Tag,
+    Skeleton,
+    Spin,
+
   } from 'antd';
 import { Link } from 'react-router-dom';
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 const columns = [
     {
@@ -55,16 +62,16 @@ const data = [
 ]
 
 const TimeOff = () => {
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
+
+    sleep(1000).then(r => setLoading(false))
     const onButtonClick=(e)=>{
         console.log('Button clicked')
-        setLoading(true)
-        setTimeout(() => {
-            setLoading(false)
-        }, 2000);
+
     }
     return (
         <>
+          <Spin spinning={loading}>
             <Card title={"Time Off Page"}/>
             <Row justify="end" style={{ marginBottom: '1rem' }}>
                 <Col>
@@ -79,11 +86,14 @@ const TimeOff = () => {
                     </Link>
                 </Col>
             </Row>
+            <Skeleton loading={loading}>
             <Table
                 dataSource={data}
                 columns={columns}
                 bordered
                 ></Table>
+            </Skeleton>
+          </Spin>
         </>
     )
 };
