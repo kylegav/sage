@@ -16,17 +16,7 @@ const NavMenu = () => {
             key: "timeoff",
             label: "Time Off",
         },
-       
-        {
-            key: "employee",
-            label: "Employees",
-            children: [
-                {
-                    key: "tableview",
-                    label: "Employee Roster"
-                }
-            ]
-        },
+
         {
             key: "account",
             label: "Account",
@@ -40,11 +30,11 @@ const NavMenu = () => {
         },
         {
             key: "employee",
-            label: "Employees",
+            label: "Staff Management",
             children: [
                 {
                     key: "tableview",
-                    label: "Table View"
+                    label: "Employee Roster"
                 }
             ]
         }
