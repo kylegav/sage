@@ -21,7 +21,7 @@ const Contacts = () => {
         actions={[<FacebookFilled style={{ color: "blue" }} onClick={()=> newTab('https://www.facebook.com')}/>,
          <TwitterOutlined style={{ color: "skyblue" }} onClick={()=> newTab('https://www.twitter.com')}/>,
          <InstagramOutlined style={{color: "purple"}} onClick={()=> newTab('https://www.Instagram.com')}/>,
-         <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com')}/>,
+         <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}/>,
         ]}
       >
         <Skeleton loading={false} avatar active>
@@ -37,7 +37,7 @@ const Contacts = () => {
         actions={[<FacebookFilled style={{ color: "blue" }} onClick={()=> newTab('https://www.facebook.com')}/>,
         <TwitterOutlined style={{ color: "skyblue" }} onClick={()=> newTab('https://www.twitter.com')}/>,
         <InstagramOutlined style={{color: "purple"}} onClick={()=> newTab('https://www.Instagram.com')}/>,
-        <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com')}/>,
+        <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}/>,
       ]}
       >
         <Skeleton loading={false} avatar active>
@@ -53,7 +53,7 @@ const Contacts = () => {
         actions={[<FacebookFilled style={{ color: "blue" }} onClick={()=> newTab('https://www.facebook.com')}/>,
         <TwitterOutlined style={{ color: "skyblue" }} onClick={()=> newTab('https://www.twitter.com')}/>,
         <InstagramOutlined style={{color: "purple"}} onClick={()=> newTab('https://www.Instagram.com')}/>,
-        <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com')}/>,
+        <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}/>,
       ]}  
       >
         <Skeleton loading={false} avatar active>
@@ -69,7 +69,7 @@ const Contacts = () => {
         actions={[<FacebookFilled style={{ color: "blue" }} onClick={()=> newTab('https://www.facebook.com')}/>,
         <TwitterOutlined style={{ color: "skyblue" }} onClick={()=> newTab('https://www.twitter.com')}/>,
         <InstagramOutlined style={{color: "purple"}} onClick={()=> newTab('https://www.Instagram.com')}/>,
-        <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com')}/>,
+        <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}/>,
       ]}
       >
         <Skeleton loading={false} avatar active>
