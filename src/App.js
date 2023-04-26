@@ -1,11 +1,13 @@
 import AppRoutes from "./Components/AppRoutes";
 import NavMenu from "./Components/NavMenu"
-import {Layout} from "antd";
+import {Layout, Table} from "antd";
 import packageInfo from "../package.json"
+import dummydata from "./Data/dummydata.json"
 
 const {Content, Footer, Header} = Layout;
 
 function App() {
+
   return (
       <Layout>
         <Header>

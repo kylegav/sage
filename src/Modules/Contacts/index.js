@@ -9,6 +9,7 @@ const newTab=url=>{
   window.open(url)
 }
 
+
 const Contacts = () => {
     return (
       
@@ -72,11 +73,12 @@ const Contacts = () => {
         <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}/>,
       ]}
       >
-        <Skeleton loading={false} avatar active>
+        <Skeleton loading={true} avatar active>
           <Meta
             avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=4" />}
             title="Emperor Kuzco"
             description="3029413502     emperor.kuzco@sage.com"
+
           />
         </Skeleton>
       </Card>

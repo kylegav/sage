@@ -1,0 +1,56 @@
+[
+    {
+     "Name": "John Smith", 
+     "Wednesday": "Unavailable", 
+     "Thursday": ["12:45 PM", "09:00 PM"], 
+     "Friday": ["12:45 PM", "08:30 PM"], 
+     "Saturday": ["12:45 PM", "07:15 PM"], 
+     "Sunday": "Unavailable", "Monday": ["12:45 PM", "08:45 PM"], 
+     "Tuesday": ["12:45 PM", "06:45 PM"], 
+     "employeeID": 1
+    },
+    {
+     "Name": "Dennis Rogers", 
+     "Wednesday": "Unavailable", 
+     "Thursday": ["12:45 PM", "08:00 PM"], 
+     "Friday": ["12:45 PM", "08:15 PM"], 
+     "Saturday": ["12:45 PM", "07:30 PM"], 
+     "Sunday": "Unavailable", 
+     "Monday": ["12:45 PM", "07:45 PM"], 
+     "Tuesday": ["12:45 PM", "07:00 PM"], 
+     "employeeID": 2
+    },
+    {
+     "Name": "Mary Ross", 
+     "Wednesday": "Unavailable", 
+     "Thursday": ["12:30 PM", "08:15 PM"], 
+     "Friday": ["12:30 PM", "08:00 PM"], 
+     "Saturday": ["12:45 PM", "06:00 PM"], 
+     "Sunday": "Unavailable", 
+     "Monday": ["12:45 PM", "05:45 PM"], 
+     "Tuesday": ["12:45 PM", "06:30 PM"], 
+     "employeeID": 3
+    },
+    {
+     "Name": "Joe Schmoe ", 
+     "Wednesday": "Unavailable", 
+     "Thursday": ["12:30 PM", "07:45 PM"], 
+     "Friday": ["12:30 PM", "09:00 PM"], 
+     "Saturday": ["12:30 PM", "05:45 PM"], 
+     "Sunday": "Unavailable", 
+     "Monday": ["12:30 PM", "06:45 PM"], 
+     "Tuesday": ["12:30 PM", "06:15 PM"], 
+     "employeeID": 4
+    },
+    {
+     "Name": "Greg ", 
+     "Wednesday": "Unavailable", 
+     "Thursday": ["12:15 PM", "08:15 PM"], 
+     "Friday": ["12:30 PM", "08:30 PM"], 
+     "Saturday": ["12:30 PM", "07:30 PM"], 
+     "Sunday": "Unavailable", 
+     "Monday": ["12:30 PM", "08:45 PM"], 
+     "Tuesday": ["12:30 PM", "07:00 PM"], 
+     "employeeID": 5
+     }
+]
