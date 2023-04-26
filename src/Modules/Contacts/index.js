@@ -5,7 +5,9 @@ import {FacebookFilled, TwitterOutlined, InstagramOutlined, YoutubeFilled} from 
 import { Pagination } from "antd";
 
 const {Meta} = Card;
-
+const newTab=url=>{
+  window.open(url)
+}
 
 const Contacts = () => {
     return (
@@ -16,10 +18,10 @@ const Contacts = () => {
       
       <Card
         style={{ width: 300, height:150, marginTop: 10, border: 0, background:'linear-gradient(#00cc66,#99ccff)' }}
-        actions={[<FacebookFilled style={{ color: "blue" }}/>,
-         <TwitterOutlined style={{ color: "skyblue" }}/>,
-         <InstagramOutlined style={{color: "purple"}}/>,
-         <YoutubeFilled style={{ color: "red"}}/>,
+        actions={[<FacebookFilled style={{ color: "blue" }} onClick={()=> newTab('https://www.facebook.com')}/>,
+         <TwitterOutlined style={{ color: "skyblue" }} onClick={()=> newTab('https://www.twitter.com')}/>,
+         <InstagramOutlined style={{color: "purple"}} onClick={()=> newTab('https://www.Instagram.com')}/>,
+         <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com')}/>,
         ]}
       >
         <Skeleton loading={false} avatar active>
@@ -32,10 +34,10 @@ const Contacts = () => {
       </Card>
       <Card
         style={{ width: 300, height:150, marginTop: 75, border: 0, background:'linear-gradient(#00cc66,#99ccff)' }}
-        actions={[<FacebookFilled style={{ color: "blue" }}/>,
-        <TwitterOutlined style={{ color: "skyblue" }}/>,
-        <InstagramOutlined style={{color: "purple"}}/>,
-        <YoutubeFilled style={{ color: "red"}}/>,
+        actions={[<FacebookFilled style={{ color: "blue" }} onClick={()=> newTab('https://www.facebook.com')}/>,
+        <TwitterOutlined style={{ color: "skyblue" }} onClick={()=> newTab('https://www.twitter.com')}/>,
+        <InstagramOutlined style={{color: "purple"}} onClick={()=> newTab('https://www.Instagram.com')}/>,
+        <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com')}/>,
       ]}
       >
         <Skeleton loading={false} avatar active>
@@ -48,10 +50,10 @@ const Contacts = () => {
       </Card>
       <Card
         style={{ width: 300, height:150, marginTop: 75, border: 0, background:'linear-gradient(#00cc66,#99ccff)' }}
-        actions={[<FacebookFilled style={{ color: "blue" }}/>,
-        <TwitterOutlined style={{ color: "skyblue" }}/>,
-        <InstagramOutlined style={{color: "purple"}}/>,
-        <YoutubeFilled style={{ color: "red"}}/>,
+        actions={[<FacebookFilled style={{ color: "blue" }} onClick={()=> newTab('https://www.facebook.com')}/>,
+        <TwitterOutlined style={{ color: "skyblue" }} onClick={()=> newTab('https://www.twitter.com')}/>,
+        <InstagramOutlined style={{color: "purple"}} onClick={()=> newTab('https://www.Instagram.com')}/>,
+        <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com')}/>,
       ]}  
       >
         <Skeleton loading={false} avatar active>
@@ -64,10 +66,10 @@ const Contacts = () => {
       </Card>
       <Card
         style={{ width: 300, height:170, marginTop: 75, border: 0, background:'linear-gradient(#00cc66,#99ccff)', fontSize: 15, color: 'white' }}
-        actions={[<FacebookFilled style={{ color: "blue" }}/>,
-        <TwitterOutlined style={{ color: "skyblue" }}/>,
-        <InstagramOutlined style={{color: "purple"}}/>,
-        <YoutubeFilled style={{ color: "red"}}/>,
+        actions={[<FacebookFilled style={{ color: "blue" }} onClick={()=> newTab('https://www.facebook.com')}/>,
+        <TwitterOutlined style={{ color: "skyblue" }} onClick={()=> newTab('https://www.twitter.com')}/>,
+        <InstagramOutlined style={{color: "purple"}} onClick={()=> newTab('https://www.Instagram.com')}/>,
+        <YoutubeFilled style={{ color: "red"}} onClick={()=> newTab('https://www.youtube.com')}/>,
       ]}
       >
         <Skeleton loading={false} avatar active>
