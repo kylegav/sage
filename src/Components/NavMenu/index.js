@@ -23,7 +23,7 @@ const NavMenu = () => {
             children: [
                 {
                     key: "tableview",
-                    label: "Table View"
+                    label: "Employee Roster"
                 }
             ]
         },
