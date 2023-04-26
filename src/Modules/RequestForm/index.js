@@ -1,11 +1,12 @@
 import React from 'react';
-import { ArrowLeftOutlined } from '@ant-design/icons';
-import { Form,
+import {
+    Form,
     Input,
     DatePicker,
     Cascader,
-    Button
-} from 'antd';
+    Button,
+    } from 'antd';
+import { ArrowLeftOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 
 const options = [
@@ -41,35 +42,43 @@ const RequestForm = () => {
     };
 
     return (
-        <Form form={form} onFinish={onFinish}>
-            <Button
-                type='text'
-                icon={<ArrowLeftOutlined />}
-                onClick={handleGoBack}
-            >Back</Button>
-            <Form.Item
-                label="Date Range"
-                name="dateRange"
-                rules={[{ required: true, message: 'Please select a date range!' }]}
-            >
-                <DatePicker.RangePicker />
-            </Form.Item>
-            <Form.Item
-                label="Leave Type"
-                name="leaveType"
-                rules={[{ required: true, message: 'Please select a leave type!' }]}
-            >
-                <Cascader options={options} placeholder="Please select" />
-            </Form.Item>
-            <Form.Item label="Note" name="note">
-                <Input.TextArea rows={4} />
-            </Form.Item>
-            <Form.Item>
-                <Button type="primary" htmlType="submit">
-                    Submit
-                </Button>
-            </Form.Item>
-        </Form>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+        }}>
+            <div style={{ marginBottom: 16 }}>
+                <Button
+                    type="text"
+                    icon={<ArrowLeftOutlined />}
+                    onClick={handleGoBack}
+                >Back</Button>
+            </div>
+            <Form form={form} onFinish={onFinish} style={{ width: '100%', maxWidth: 400 }}>
+                <Form.Item
+                    label="Date Range"
+                    name="dateRange"
+                    rules={[{ required: true, message: 'Please select a date range!' }]}
+                >
+                    <DatePicker.RangePicker />
+                </Form.Item>
+                <Form.Item
+                    label="Leave Type"
+                    name="leaveType"
+                    rules={[{ required: true, message: 'Please select a leave type!' }]}
+                >
+                    <Cascader options={options} placeholder="Please select" />
+                </Form.Item>
+                <Form.Item label="Note" name="note">
+                    <Input.TextArea rows={4} />
+                </Form.Item>
+                <Form.Item style={{ textAlign: 'right' }}>
+                    <Button type="primary" htmlType="submit">
+                        Submit
+                    </Button>
+                </Form.Item>
+            </Form>
+        </div>
     );
 };
 
