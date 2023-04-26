@@ -68,7 +68,7 @@ const TimeOff = () => {
             <Card title={"Time Off Page"}/>
             <Row justify="end" style={{ marginBottom: '1rem' }}>
                 <Col>
-                    <Link to="/timeoff/availability-request-form">
+                    <Link to="/timeoff/RequestForm">
                         <Button
                             type='default'
                             style={{ float: 'right' }}
