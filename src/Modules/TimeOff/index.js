@@ -2,92 +2,86 @@ import React, { useState } from 'react';
 import { PlusOutlined } from '@ant-design/icons';
 import {
     Card,
-    Form,
-    Input,
     Button,
-    Select,
-    Cascader,
-    DatePicker,
-    InputNumber,
-    TreeSelect,
-    Switch,
-    Checkbox,
-    Upload,
+    Row,
+    Col,
+    Table,
+    Tag,
   } from 'antd';
 
-const { RangePicker } = DatePicker;
-const { TextArea } = Input;
-const TimeOff = () => {
-    // TODO: Update UI to display correct names
-    const onFinish = (values) => {
-        console.log("Finished:", values)
-    };
+const columns = [
+    {
+        title: 'Name',
+        dataIndex: 'name',
+        key: 'name',
+    },
+    {
+        title: 'Date',
+        dataIndex: 'date',
+        key: 'date',
+        sorter: (a,b) => new Date(a.date) - new Date(b.date),
+    },
+    {
+        //Use column.shouldCellUpdate to update status tag
+        title: 'Status',
+        dataIndex: 'status',
+        key: 'status',
+        render:(status) => (
+            <>
+                {status === 'Approved' && <Tag color='green'>{status}</Tag>}
+                {status === 'Denied' && <Tag color='red'>{status}</Tag>}
+                {status === 'Pending' && <Tag color='orange'>{status}</Tag>}
+            </>
+        ),
+    },
+]
 
-    const onFinishFailed = (errorInfo) => {
-        console.log("Failed to Finish:", errorInfo)
-    };
+const data = [
+    {
+        name: 'Joe Shmama',
+        date: 'August 12',
+        status: 'Approved',
+    },
+    {
+        name: 'Mike Hawk',
+        date: 'August 13',
+        status: 'Denied',
+    },
+    {
+        name: 'Johnny Blaze',
+        date: 'August 9',
+        status: 'Pending',
+    },
+]
+
+const TimeOff = () => {
+    const [loading, setLoading] = useState(false)
+    const onButtonClick=(e)=>{
+        console.log('Button clicked')
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000);
+    }
     return (
         <>
-        <Card title={"Time Off Request"}>
-        <Form
-            name="TimeOff"
-            labelCol={{
-                span: 8,
-            }}
-            wrapperCol={{
-                span: 16,
-            }}
-            style={{
-                maxWidth: 600,
-            }}
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-            autoComplete="off"
-            >
-            <Form.Item
-            label="Username"
-            name="username"
-            rules={[
-                {
-                    required: true,
-                    message: 'Please input your username!',
-                },
-            ]}
-            >
-                <Input />
-            <Form.Item>
-                <Form.Item label="DateRangePicker">
-                    <RangePicker />
-                </Form.Item>
-            </Form.Item>
-            </Form.Item>
-            <Form.Item label="Reason">
-                <Cascader
-                    options={[
-                      {
-                        value: 'Vacation',
-                        label: 'Vacation',
-                    },
-                      {
-                        value: 'Sick Leave',
-                        label: 'Sick Leave'
-                      },
-                    ]}
-                    />
-            </Form.Item>
-            <Form.Item label="Reason for time off request:">
-                <TextArea rows={4}/>
-            </Form.Item>
-            <Form.Item>
-                <Form.Item>
-                    <Button>Submit</Button>
-                </Form.Item>
-            </Form.Item>
-        </Form>
-        </Card>
+            <Card title={"Time Off Page"}/>
+            <Row justify="end" style={{ marginBottom: '1rem' }}>
+                <Col>
+                    <Button
+                        type='default'
+                        style={{ float: 'right' }}
+                        loading={loading}
+                        icon={<PlusOutlined />}
+                        onClick={onButtonClick}
+                    >Request Availability</Button>
+                </Col>
+            </Row>
+            <Table
+                dataSource={data}
+                columns={columns}
+                bordered
+                ></Table>
         </>
     )
 };
