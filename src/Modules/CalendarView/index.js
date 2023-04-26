@@ -19,7 +19,7 @@ const CalendarView = () => {
    const [loading, setLoading] = useState(true);
 
   // Illusion of "loading data"
-   sleep(2000).then(r => setLoading(false))
+   sleep(1500).then(r => setLoading(false))
 
    const getShiftCellData = (value) => {
      let listData;
