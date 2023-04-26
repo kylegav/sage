@@ -3,7 +3,8 @@ import { PlusOutlined } from '@ant-design/icons';
 import {
     Card,
     Button,
-    Space,
+    Row,
+    Col,
     Table,
     Tag,
   } from 'antd';
@@ -64,13 +65,18 @@ const TimeOff = () => {
     }
     return (
         <>
-            <Button
-                type='primary'
-                loading={loading}
-                icon={<PlusOutlined />}
-                onClick={onButtonClick}
-                >Request Availability</Button>
             <Card title={"Time Off Page"}/>
+            <Row justify="end" style={{ marginBottom: '1rem' }}>
+                <Col>
+                    <Button
+                        type='default'
+                        style={{ float: 'right' }}
+                        loading={loading}
+                        icon={<PlusOutlined />}
+                        onClick={onButtonClick}
+                    >Request Availability</Button>
+                </Col>
+            </Row>
             <Table
                 dataSource={data}
                 columns={columns}
