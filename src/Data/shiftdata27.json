@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "Kyle Gavin",
+    "ShiftStart": "4/27/2023 10:00AM",
+    "ShiftEnd": " 4/27/2023 4:00PM",
+    "Workcenter": "Wait"
+  },
+  {
+    "Name": "Patunya Picklebottom",
+    "ShiftStart": "4/27/2023 3:45PM",
+    "ShiftEnd": "4/28/2023 12:00AM",
+    "Workcenter": "Wait"
+  },
+  {
+    "Name": "Jerome Brown",
+    "ShiftStart": "4/27/2023 3:45PM",
+    "ShiftEnd": "4/27/2023 9:00PM",
+    "Workcenter": "Wait"
+  },
+  {
+    "Name": "Alexander White",
+    "ShiftStart": "4/27/2023 9:00AM",
+    "ShiftEnd": "4/27/2023 4:00PM",
+    "Workcenter": "Kitchen"
+  },
+  {
+    "Name": "Sally Stevens",
+    "ShiftStart": "4/27/2023 11:00AM",
+    "ShiftEnd": "4/27/2023 8:00PM",
+    "Workcenter": "Kitchen"
+  },
+  {
+    "Name": "Joeseph Green",
+    "ShiftStart": "4/27/2023 8:00AM",
+    "ShiftEnd": "4/27/2023 4:00PM",
+    "Workcenter": "Manager"
+  }
+]
