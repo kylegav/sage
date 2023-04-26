@@ -11,26 +11,30 @@ const NavMenu = () => {
             key: "/",
             label: "Home",
         },
-        {
-            key: "account",
-            label: "Account",
-
-        },
+        
         {
             key: "timeoff",
             label: "Time Off",
         },
+
         {
-            key: "contacts",
-            label: "Contacts",
+            key: "account",
+            label: "Account",
+            children: [
+                {
+                    key: "contacts",
+                    label: "Contacts",
+                }
+            ]
+
         },
         {
             key: "employee",
-            label: "Employees",
+            label: "Staff Management",
             children: [
                 {
                     key: "tableview",
-                    label: "Table View"
+                    label: "Employee Roster"
                 }
             ]
         }
