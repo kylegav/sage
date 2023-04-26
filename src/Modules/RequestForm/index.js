@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     Form,
     Input,
@@ -34,12 +34,21 @@ const RequestForm = () => {
 
     const onFinish = (values) => {
         console.log('Form values:', values);
-        // Here you can add the logic to submit the form data to your backend
+        navigate('/timeoff');
     };
 
     const handleGoBack = () => {
         navigate('/timeoff');
     };
+
+    const [loading, setLoading] = useState(false)
+    const onButtonClick=(e)=>{
+        console.log('Button clicked')
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000);
+    }
 
     return (
         <div style={{
@@ -73,7 +82,11 @@ const RequestForm = () => {
                     <Input.TextArea rows={4} />
                 </Form.Item>
                 <Form.Item style={{ textAlign: 'right' }}>
-                    <Button type="primary" htmlType="submit">
+                    <Button
+                        type="primary"
+                        htmlType="submit"
+                        loading={loading}
+                    >
                         Submit
                     </Button>
                 </Form.Item>
