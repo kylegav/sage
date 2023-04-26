@@ -1,20 +1,30 @@
 import {Card, Calendar, Alert, Popover} from 'antd';
 import React, { useState } from 'react';
 import dayjs from 'dayjs';
-import shiftdata from "../../Data/shiftdata.json"
+import shiftdata26 from "../../Data/shiftdata26.json"
 import shiftdata23 from "../../Data/shiftdata23.json"
+import shiftdata24 from "../../Data/shiftdata24.json"
+import shiftdata25 from "../../Data/shiftdata25.json"
+import shiftdata27 from "../../Data/shiftdata27.json"
 
 
 const CalendarView = () => {
    const [value, setValue] = useState(() => dayjs(dayjs.today));
    const [selectedValue, setSelectedValue] = useState(() => dayjs(dayjs.today));
 
+
    const getShiftCellData = (value) => {
      let listData;
      if (value.date() === 26) {
-       listData = shiftdata;
+       listData = shiftdata26;
      } else if (value.date() === 23) {
        listData = shiftdata23;
+     } else if (value.date() === 24) {
+       listData = shiftdata24;
+     } else if (value.date() === 25) {
+       listData= shiftdata25;
+     } else if (value.date() === 27) {
+       listData = shiftdata27;
      }
      return listData || [];
    };
@@ -33,6 +43,12 @@ const CalendarView = () => {
        return "blue"
      } else if (Workcenter === "Wait") {
        return "red"
+     } else if (Workcenter == "Kitchen") {
+       return "yellow"
+     } else if (Workcenter == "Host") {
+       return "green"
+     } else {
+       return "gray"
      }
 
 
@@ -41,7 +57,7 @@ const CalendarView = () => {
    const dateCellRender = (value) => {
      const listData = getShiftCellData(value);
 
-     const content = (shiftStart, shiftEnd) => {
+     const content = (shiftStart, shiftEnd, workcenter) => {
        return (
          <div>
            <p>{shiftStart} till {shiftEnd}</p>
@@ -52,7 +68,10 @@ const CalendarView = () => {
      return (
        <ul className="shift">
        {listData.map((item) => (
-         <Popover content={content(item.ShiftStart,item.ShiftEnd)} title={`${item.Name} - ${item.Workcenter}`}>
+         <Popover content={content(item.ShiftStart,item.ShiftEnd)}
+                  title={`${item.Name} - ${item.Workcenter}`}
+                  trigger="hover"
+         >
            <Card title={`${item.Name} - ${item.Workcenter}`}
                  size={"small"}
                  bordered={true}
